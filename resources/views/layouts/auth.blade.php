@@ -13,12 +13,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/third-party.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ mix('assets/css/page.css') }}">    <!-- CSS Libraries -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/login.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.css') }}">
     @stack('css')
     @yield('css')
 </head>
 <body>
+<div class="position-absolute" style="width:100%;height:100%" id="particles-js"></div>
 <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed authImage">
     <div class="dropdown ms-auto">
         <button type="button" title="Active" class="dropdown-toggle hide-arrow btn btn btn-info m-7 mb-5 pl-2"
@@ -45,7 +46,7 @@
 
     @yield('content')
 </div>
-<footer>
+{{-- <footer>
     <div class="container-fluid padding-0">
         <div class="row align-items-center justify-content-center">
             <div class="col-xl-6">
@@ -58,13 +59,15 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 <!-- Scripts -->
 <script src="{{ mix('assets/js/front-third-party.js') }}"></script>
 <script src="{{ asset('assets/js/messages.js') }}"></script>
 <script src="{{ mix('assets/js/custom/helpers.js')}}"></script>
 <script src="{{ mix('assets/js/custom/custom.js') }}"></script>
 <script src="{{ mix('assets/js/auth/auth.js') }}"></script>
+<script type='text/javascript' src='https://28network.net/wp-content/themes/28network/assets/js/particles.js?ver=1.0.0' id='particles-js'></script>
+<script type='text/javascript' src='https://28network.net/wp-content/themes/28network/assets/js/particles-config.js?ver=1.0.0' id='particles-config-js'></script>
 @stack('scripts')
 <script>
     $(document).ready(function () {

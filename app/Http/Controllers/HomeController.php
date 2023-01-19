@@ -36,14 +36,13 @@ class HomeController extends AppBaseController
         }
 
         $setting = Setting::pluck('value', 'key')->toArray();
-
+        // dd($setting);
         $aboutUS = AboutUs::with('media')->get()->toArray();
 
         $features = Feature::all();
 
         $plans = Plan::with(['currency', 'planFeature', 'hasZeroPlan'])->get();
-
-        $view = getSuperAdminSettingValue('is_front_page') ? view('front.home.home', compact('plans', 'setting', 'features', 'testimonials', 'aboutUS', 'metas')) : redirect(route('login'));
+        $view = getSuperAdminSettingValue('is_front_page') ? view('front.home.home2', compact('plans', 'setting', 'features', 'testimonials', 'aboutUS', 'metas')) : redirect(route('login'));
 
         return  $view;
     }

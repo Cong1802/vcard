@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +42,27 @@
     @php  $langSession = Session::get('languageName');
            $frontLanguage = !isset($langSession) ? getSuperAdminSettingValue('default_language') : $langSession;
     @endphp
+
+
+    <link href={{ asset("frontend/vendor/bootstrap/css/bootstrap.min.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/vendor/bootstrap-icons/bootstrap-icons.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/vendor/boxicons/css/boxicons.min.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/vendor/glightbox/css/glightbox.min.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/vendor/remixicon/remixicon.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/vendor/swiper/swiper-bundle.min.css")}} rel="stylesheet">
+    <link href={{ asset("frontend/css/style.css")}} rel="stylesheet">
+</head>
+
+<body data-bs-offset="71">
+    <!-- start header section -->
+    {{-- @include('front.layouts.header') --}}
+    @include('include.header')
+    @yield('content')
+    @include("include.loading")
+    {{-- @include("include.IconContact") --}}
+    @include('include.footer')
+
+</body>
     <script>
         let frontLanguage = "{{ $frontLanguage }}"
         Lang.setLocale(frontLanguage)
@@ -62,12 +84,15 @@
             {!! $metas['google_analytics'] !!}
         </script>
     @endif
-</head>
-
-<body data-bs-offset="71">
-<!-- start header section -->
-@include('front.layouts.header')
-@yield('content')
-@include('front.layouts.footer')
-</body>
+      <!-- Vendor JS Files -->
+    <script src={{ asset("frontend/vendor/purecounter/purecounter_vanilla.js")}}></script>
+    <script src={{ asset("frontend/vendor/bootstrap/js/bootstrap.bundle.min.js")}}></script>
+    <script src={{ asset("frontend/vendor/glightbox/js/glightbox.min.js")}}></script>
+    <script src={{ asset("frontend/vendor/isotope-layout/isotope.pkgd.min.js")}}></script>
+    <script src={{ asset("frontend/vendor/swiper/swiper-bundle.min.js")}}></script>
+    <script src={{ asset("frontend/vendor/waypoints/noframework.waypoints.js")}}></script>
+    <script src={{ asset("frontend/vendor/php-email-form/validate.js")}}></script>
+    <script type='text/javascript' src='https://28network.net/wp-content/themes/28network/assets/js/particles.js?ver=1.0.0' id='particles-js'></script>
+    <script type='text/javascript' src='https://28network.net/wp-content/themes/28network/assets/js/particles-config.js?ver=1.0.0' id='particles-config-js'></script>
+    <script src={{ asset("frontend/js/main.js")}}></script>
 </html>
