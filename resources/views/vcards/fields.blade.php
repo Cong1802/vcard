@@ -23,7 +23,7 @@
         </div>
         <div class="col-lg-6 mb-7">
             {{ Form::label('description', __('messages.vcard.description').':', ['class' => 'form-label']) }}
-            <div id="vcardDescriptionQuill" class="editor-height" style="height: 200px"></div>
+            <div id="vcardDescriptionQuill" class="editor-height" style="height: 200px">scsdcdscdscsd</div>
             {{ Form::hidden('description', isset($vcard) ? $vcard->description : null, ['id' => 'vcardDescriptionData']) }}
         </div>
         <div class="col-lg-3 col-sm-6 mb-7">

@@ -7,8 +7,8 @@
         <div class="col-12 text-center">
             <a href="{{ route('home') }}" class="image mb-7 mb-sm-10">
                 <div class="wrapper p-0">
-                    <div class="top">My Profile</div>
-                    <div class="bottom" aria-hidden="true">My Profile</div>
+                    <div class="top">Digital Card</div>
+                    <div class="bottom" aria-hidden="true">Digital Card</div>
                 </div>
             </a>
         </div>
@@ -49,7 +49,7 @@
                     <label class="form-check-label text-color" for="remember_me">{{ __('messages.common.remember_me') }}</label>
                 </div> --}}
                 <div class="d-grid">
-                    <input type="submit" class="btn shadow-css" value="{{ __('messages.common.login') }}"/>
+                    <input type="submit" class="btn shadow-css2" value="{{ __('messages.common.login') }}"/>
                 </div>
                 <div class="d-flex align-items-center mb-5 mt-4">
                     <span class="text-gray-700 me-2">{{__('messages.common.new_here').'?'}}</span>

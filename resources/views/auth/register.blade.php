@@ -7,8 +7,8 @@
         <div class="col-12 text-center">
             <a href="{{ route('home') }}" class="image mb-7 mb-sm-10">
                 <div class="wrapper p-0">
-                    <div class="top">My Profile</div>
-                    <div class="bottom" aria-hidden="true">My Profile</div>
+                    <div class="top">Digital Card</div>
+                    <div class="bottom" aria-hidden="true">Digital Card</div>
                 </div>
             </a>
         </div>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="d-grid">
-                        <input type="submit" class="btn shadow-css" value="{{ __('messages.common.submit') }}"/>
+                        <input type="submit" class="btn shadow-css2" value="{{ __('messages.common.submit') }}"/>
                     </div>
                     <div class="d-flex align-items-center fs-7 mt-4">
                         <span class="text-gray-700 me-2">{{__('messages.common.already_have_an_account').'?'}}</span>

@@ -6,7 +6,7 @@
             <div></div>
             <span></span>
         </div>
-        <p>MY PROFILE</p>
+        <p>Digital Card</p>
     </div>
     <div class="containers d-flex justify-content-end">
         <div class="btn">

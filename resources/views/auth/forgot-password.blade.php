@@ -7,8 +7,8 @@
         <div class="col-12 text-center">
             <a href="{{ route('home') }}" class="image mb-7 mb-sm-10">
                 <div class="wrapper p-0">
-                    <div class="top">My Profile</div>
-                    <div class="bottom" aria-hidden="true">My Profile</div>
+                    <div class="top">Digital Card</div>
+                    <div class="bottom" aria-hidden="true">Digital Card</div>
                 </div>
             </a>
         </div>
@@ -42,9 +42,9 @@
                 <div class="row">
                     <!-- Submit Field -->
                     <div class="form-group col-sm-12 text-start align-items-center">
-                        <input type="submit" class="btn shadow-css w-100" value="{{ __('messages.email_password_reset_link') }}" />
+                        <input type="submit" class="btn shadow-css2 w-100" value="{{ __('messages.email_password_reset_link') }}" />
                         <a href="{{ route('login') }}"
-                           class="btn text-white shadow-css w-100 my-4">{{__('messages.common.cancel')}}</a>
+                           class="btn text-white w-100 my-4">{{__('messages.common.cancel')}}</a>
                     </div>
                 </div>
             </form>

@@ -43,7 +43,7 @@ class RegisteredUserController extends Controller
             DB::beginTransaction();
 
             $tenant = MultiTenant::create(['tenant_username' => $request->first_name]);
-            $userDefaultLanguage = Setting::where('key', 'user_default_language')->first()->value ?? 'en';
+            $userDefaultLanguage = Setting::where('key', 'user_default_language')->first()->value ?? 'vi';
 
             $user = User::create([
                 'first_name' => $request->first_name,

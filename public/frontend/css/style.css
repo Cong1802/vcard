@@ -15,6 +15,36 @@ body {
   position: relative;
   background: transparent;
 }
+.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.313rem;
+  color: #6c757d;
+  display: block;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.688rem 0.938rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 100%;
+}
+.shadow-css2
+{
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7), -1px -3px 3px -2px rgba(255, 255, 255, 0.2) !important;
+}
+.shadow-css
+{
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset !important;
+}
+.cookie-consent
+{
+  z-index: 1000000 !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
 .img-fluid
 {
   transform: rotate(180deg);
@@ -521,8 +551,9 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: #212529;
   padding: 30px;
+  border-radius: 0.313rem;
 }
 
 @media (max-width: 768px) {
@@ -854,13 +885,38 @@ section .container {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+/* .align-items-stretch
+{
+  margin-bottom: 25px;
+} */
 .services .icon-box {
+  z-index: 1;
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 10px 10px 19px #1c1e22,
+  -10px -10px 19px #262a2e;
   text-align: center;
-  background: rgba(204, 204, 204, 0.1);
+  background: linear-gradient(145deg, #1e2024, #23272b);;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
 }
-
+.services .icon-box::before {
+  content: "";
+  transition: 0.5s all ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  opacity: 0;
+  z-index: -1;
+}
+.services .icon-box:hover::before {
+  opacity: 1;
+}
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
@@ -909,10 +965,10 @@ section .container {
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+/* .services .icon-box:hover {
   background: #18d26e;
   border-color: #18d26e;
-}
+} */
 
 .services .icon-box:hover .icon {
   background: #fff;
@@ -1168,7 +1224,8 @@ section .container {
   color: #444444;
   padding: 20px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.08);
+  background: #28292d;
+  /* background: rgba(255, 255, 255, 0.08); */
 }
 
 .contact .info-box i.bx {
@@ -1215,18 +1272,31 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #28292d;
+  border-radius: 0.313rem;
 }
-
+input[type="submit"]:hover {
+  background: #03e9f4;
+  color: #03e9f4 !important;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #03e9f4,
+              0 0 5px #03e9f4,
+              0 0 10px #03e9f4,
+              0 0 30px #03e9f4 !important;
+              
+}
 .contact .php-email-form .error-message {
   display: none;
-  background: rgba(255, 255, 255, 0.08);
+  background: #28292d;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
   font-weight: 600;
 }
-
+.info-box
+{
+  border-radius: 0.313rem;
+}
 .contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
@@ -1262,10 +1332,9 @@ section .container {
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  background: transparent;
   border: 0;
   transition: 0.3s;
   color: #fff;

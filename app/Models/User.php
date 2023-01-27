@@ -118,6 +118,7 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
         'pt' => 'Portuguese',
         'ru' => 'Russian',
         'es' => 'Spanish',
+        'vi' => 'Vietnamese',
         'tr' => 'Turkish',
     ];
 
@@ -275,6 +276,7 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
         'pt' => 'assets/img/LanguageImage/portuguese.png',
         'ru' => 'assets/img/LanguageImage/russian.jpeg',
         'es' => 'assets/img/LanguageImage/spain.png',
+        'vi' => 'assets/img/LanguageImage/vietnamese.png',
         'tr' => 'assets/img/LanguageImage/turkish.png',
     ];
 

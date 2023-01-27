@@ -185,7 +185,7 @@ class UserController extends AppBaseController
     public function editProfile()
     {
         $user = Auth::user();
-
+        // dd($user);
         return view('profile.index', compact('user'));
     }
 
@@ -203,7 +203,6 @@ class UserController extends AppBaseController
         } else {
             Flash::success(__('messages.flash.user_profile'));
         }
-
         return redirect(route('profile.setting'));
     }
 
